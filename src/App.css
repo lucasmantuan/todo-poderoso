@@ -1,0 +1,32 @@
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    filter: blur(0.5px);
+}
+
+.titulo {
+    font-size: 2.5rem;
+}
+
+.texto {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.resposta {
+    font-size: 1.5rem;
+}
+
+.input {
+    width: 60vw;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    border-color: transparent transparent rgba(255, 255, 255, 0.6) transparent;
+    background-color: transparent;
+}
+
+.input:focus {
+    outline: none;
+}
