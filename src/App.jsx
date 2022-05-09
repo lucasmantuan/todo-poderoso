@@ -35,7 +35,7 @@ function App() {
             setResposta("Processsando...");
             
             setTimeout( () => {
-                setResposta("Resposta: " + oculta.toString().replace(/,/g, ""));
+                setResposta(oculta.toString().replace(/,/g, ""));
                 setOculta([])
                 setMensagem("")
             }, 1000)
@@ -49,7 +49,7 @@ function App() {
                 <h1 className="titulo">Todo Poderoso!</h1>
                 <p className="texto">Faça sua pergunta e pressione Enter para obter a resposta.</p>
                 <input className="input" type="text" value={mensagem} onChange={(event) => substituir(event)} onKeyDown={(event) => processar(event)} autoFocus />
-                <p className="resposta">{resposta}</p>
+                <p className="resposta">Resposta: {resposta}</p>
             </div>
         </div>
     );
