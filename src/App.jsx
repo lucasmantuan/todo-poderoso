@@ -36,7 +36,7 @@ function App() {
 
             if (/poderoso/i.test(mensagem) && /funciona/i.test(mensagem)) {
                 setTimeout(() => {
-                    setResposta("Pressione [Esc] para ativar, digite a resposta e pressione [Esc] novamente. Enquanto resposta é digitada uma outra frase é exibida. Em seguida complete a frase com a sua pergunta e pressione [Enter]. Pronto, agora você pode enganar os amigos!");
+                    setResposta("Este é um programa para você enganar os amigos! :) Para ele funcionar, você deve pressionar [Esc] e digitar a resposta correta. Enquanto resposta é digitada, outra frase é exibida. Após a resposta ter sido digitada, pressione [Esc] novamente, em seguida complete a frase com a pergunta desejada e pressione [Enter]");
                 }, 1000)
             } else {
                 if (oculta.length === 0) {
