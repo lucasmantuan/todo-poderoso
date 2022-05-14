@@ -1,33 +1,72 @@
 .App {
+    height: calc(100vh - 40px);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    filter: blur(0.5px);
+    filter: blur(0.6px);
+    margin: 20px;
 }
 
 .titulo {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
 
 .texto {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 200;
+    margin: 0 0 5px 0;
+}
+
+.texto-pequeno {
+    font-size: 0.85rem;
+    font-weight: 200;
+    margin: 0 0 20px 0;
 }
 
 .resposta {
-    font-size: 1.5rem;
+    margin: 20px 50px;
+    font-size: 1.25rem;
 }
 
 .input {
     width: 60vw;
-    font-family: "Inconsolata", monospace;    
+    padding: 10px;
+    text-align: center;
+    font-family: "Inconsolata", monospace;
     font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.8);
     border-color: transparent transparent rgba(255, 255, 255, 0.6) transparent;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .input:focus {
     outline: none;
 }
+
+.crt {
+    animation: crt 4s infinite;
+  }
+
+@keyframes crt {
+    0% { text-shadow: 1px 0 1px rgba(5, 50, 5, 0.35), -1px 2px 1px rgba(160, 250, 160, 0.35) }
+    5% { text-shadow: 3px 0 1px rgba(5, 50, 5, 0.35), -3px 2px 1px rgba(160, 250, 160, 0.35) }
+    10% { text-shadow: 1px 0 1px rgba(5, 50, 5, 0.35), -1px 2px 1px rgba(160, 250, 160, 0.35) }
+    15% { text-shadow: 1px 0 1px rgba(5, 50, 5, 0.35), -1px 0 1px rgba(160, 250, 160, 0.35) }
+    20% { text-shadow: 4px 0 1px rgba(5, 50, 5, 0.35), -4px 0 1px rgba(160, 250, 160, 0.35) }
+    25% { text-shadow: 2px 0 1px rgba(5, 50, 5, 0.35), -2px 0 1px rgba(160, 250, 160, 0.35) }
+    30% { text-shadow: 1px 0 1px rgba(5, 50, 5, 0.35), -1px 0 1px rgba(160, 250, 160, 0.35) }
+    35% { text-shadow: 4px 0 1px rgba(5, 50, 5, 0.35), -4px 0 1px rgba(160, 250, 160, 0.35) }
+    40% { text-shadow: 4px 0 1px rgba(5, 50, 5, 0.35), -4px 0 1px rgba(160, 250, 160, 0.35) }
+    45% { text-shadow: 3px 0 1px rgba(5, 50, 5, 0.35), -3px -2px 1px rgba(160, 250, 160, 0.35) }
+    50% { text-shadow: 1px 0 1px rgba(5, 50, 5, 0.35), -1px -2px 1px rgba(160, 250, 160, 0.35) }
+    55% { text-shadow: 2px 0 1px rgba(5, 50, 5, 0.35), -2px -2px 1px rgba(160, 250, 160, 0.35) }
+    60% { text-shadow: 2px 0 1px rgba(5, 50, 5, 0.35), -2px -2px 1px rgba(160, 250, 160, 0.35) }
+    65% { text-shadow: 3px 0 1px rgba(5, 50, 5, 0.35), -3px -2px 1px rgba(160, 250, 160, 0.35) }
+    70% { text-shadow: 1px 0 1px rgba(5, 50, 5, 0.35), -1px 0 1px rgba(160, 250, 160, 0.35) }
+    75% { text-shadow: 2px 0 1px rgba(5, 50, 5, 0.35), -2px 0 1px rgba(160, 250, 160, 0.35) }
+    80% { text-shadow: 1px 0 1px rgba(5, 50, 5, 0.35), -1px 0 1px rgba(160, 250, 160, 0.35) }
+    85% { text-shadow: 1px 0 1px rgba(5, 50, 5, 0.35), -1px 0 1px rgba(160, 250, 160, 0.35) }
+    90% { text-shadow: 4px 0 1px rgba(5, 50, 5, 0.35), -4px 0 1px rgba(160, 250, 160, 0.35) }
+    95% { text-shadow: 2px 0 1px rgba(5, 50, 5, 0.35), -2px 0 1px rgba(160, 250, 160, 0.35) }
+    100% { text-shadow: 3px 0 1px rgba(5, 50, 5, 0.35), -3px 0 1px rgba(160, 250, 160, 0.35) }
+  }

@@ -33,22 +33,34 @@ function App() {
     const processar = (event) => {
         if (event.key === "Enter") {
             setResposta("Processsando...");
-            
-            setTimeout( () => {
-                setResposta(oculta.toString().replace(/,/g, ""));
-                setOculta([])
-                setMensagem("")
-            }, 1000)
-            
+
+            if (/poderoso/i.test(mensagem) && /funciona/i.test(mensagem)) {
+                setTimeout(() => {
+                    setResposta("Pressione [Esc] para ativar, digite a resposta e pressione [Esc] novamente. Enquanto resposta é digitada uma outra frase é exibida. Em seguida complete a frase com a sua pergunta e pressione [Enter]. Pronto, agora você pode enganar os amigos!");
+                }, 1000)
+            } else {
+                if (oculta.length === 0) {
+                    setTimeout(() => {
+                        setResposta("Não consegui processar a resposta...");
+                    }, 1000)
+                } else {
+                    setTimeout(() => {
+                        setResposta(oculta.toString().replace(/,/g, ""));
+                        setOculta([])
+                        setMensagem("")
+                    }, 1000)
+                }
+            }
         }
     }
 
     return (
         <div className="App">
             <div>
-                <h1 className="titulo">Todo Poderoso!</h1>
-                <p className="texto">Faça sua pergunta e pressione Enter para obter a resposta.</p>
-                <input className="input" type="text" value={mensagem} onChange={(event) => substituir(event)} onKeyDown={(event) => processar(event)} autoFocus />
+                <h1 className="titulo crt">Todo Poderoso!</h1>
+                <p className="texto">Faça qualquer pergunta para o <strong className="crt">Todo Poderoso!</strong> e pressione [Enter] para obter a resposta.</p>
+                <p className="texto-pequeno">Para saber como ele funciona, faça a pergunta certa.</p>
+                <input className="input" type="text" value={mensagem} onChange={(event) => substituir(event)} onKeyDown={(event) => processar(event)} spellCheck="false" autoFocus />
                 <p className="resposta">Resposta: {resposta}</p>
             </div>
         </div>
